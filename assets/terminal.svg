@@ -1,56 +1,57 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="180" viewBox="0 0 800 180">
-  <rect width="800" height="180" fill="#050505"/>
-  <rect x="1" y="1" width="798" height="178" fill="none" stroke="#111" stroke-width="1"/>
+  <rect x="0.5" y="0.5" width="799" height="179" fill="none" stroke="#26a641" stroke-width="1" opacity="0.4" rx="4"/>
 
-  <!-- terminal dots -->
-  <circle cx="24" cy="22" r="5" fill="#1e1e1e"/>
-  <circle cx="42" cy="22" r="5" fill="#1e1e1e"/>
-  <circle cx="60" cy="22" r="5" fill="#1e1e1e"/>
-  <line x1="0" y1="36" x2="800" y2="36" stroke="#0f0f0f" stroke-width="1"/>
+  <circle cx="24" cy="22" r="5" fill="#26a641" opacity="0.5"/>
+  <circle cx="42" cy="22" r="5" fill="#26a641" opacity="0.5"/>
+  <circle cx="60" cy="22" r="5" fill="#26a641" opacity="0.5"/>
+  <line x1="0" y1="36" x2="800" y2="36" stroke="#26a641" stroke-width="1" opacity="0.3"/>
 
   <style>
     text{font-family:'Courier New',monospace;font-size:13px}
-    .prompt{fill:#ffffff}
-    .cmd{fill:#555555}
-    .out{fill:#2a2a2a}
-    .cur{fill:#ffffff}
+    .prompt{fill:#39d353}
+    .cmd{fill:#c9d1d9}
+    .out{fill:#7d8590}
+    .green{fill:#39d353}
     @keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
-    @keyframes type1{0%,5%{width:0}40%,100%{width:210px}}
-    @keyframes type2{0%,42%{width:0}70%,100%{width:360px}}
-    @keyframes appear3{0%,68%{opacity:0}69%,100%{opacity:1}}
-    @keyframes appear4{0%,76%{opacity:0}77%,100%{opacity:1}}
-    @keyframes appear5{0%,84%{opacity:0}85%,100%{opacity:1}}
-    @keyframes cur1{0%,38%{opacity:1}39%,100%{opacity:0}}
-    @keyframes cur2{0%,68%{opacity:0}69%,83%{animation-timing-function:step-end}69%,84%{opacity:1}85%,100%{opacity:0}}
-    .t1-text{animation:type1 8s steps(18,end) infinite}
-    .t2-text{animation:type2 8s steps(28,end) infinite}
-    .l3{animation:appear3 8s infinite}
-    .l4{animation:appear4 8s infinite}
-    .l5{animation:appear5 8s infinite}
-    .c1{animation:cur1 8s step-end infinite;blink:blink 0.8s step-end infinite}
-    .c2{animation:blink 0.8s step-end infinite}
+    @keyframes line1{0%,5%{width:0}25%,100%{width:170px}}
+    @keyframes line2{0%,28%{width:0}50%,100%{width:340px}}
+    @keyframes line3{0%,52%{width:0}74%,100%{width:430px}}
+    @keyframes line4{0%,76%{width:0}96%,100%{width:380px}}
+    .l1{animation:line1 6s steps(15,end) infinite}
+    .l2{animation:line2 6s steps(28,end) infinite}
+    .l3{animation:line3 6s steps(36,end) infinite}
+    .l4{animation:line4 6s steps(32,end) infinite}
+    @keyframes show1{0%,4%{opacity:0}5%,24%{opacity:1}25%,100%{opacity:1}}
+    @keyframes show2{0%,27%{opacity:0}28%,100%{opacity:1}}
+    @keyframes show3{0%,51%{opacity:0}52%,100%{opacity:1}}
+    @keyframes show4{0%,75%{opacity:0}76%,100%{opacity:1}}
+    .p1-vis{animation:show1 6s infinite}
+    .p2-vis{animation:show2 6s infinite}
+    .p3-vis{animation:show3 6s infinite}
+    .p4-vis{animation:show4 6s infinite}
     .blink{animation:blink 1s step-end infinite}
   </style>
 
-  <!-- Line 1: command -->
-  <text class="prompt" x="20" y="64">~$</text>
-  <svg x="42" y="50" width="210" height="20" overflow="hidden">
-    <rect class="t1-text" x="0" y="0" width="0" height="20" fill="#050505"/>
-    <text class="cmd" x="0" y="14">cat about.txt</text>
+  <text class="prompt p1-vis" x="20" y="64">~$</text>
+  <svg x="42" y="50" width="180" height="20" overflow="hidden">
+    <clipPath id="cl1"><rect class="l1" x="0" y="0" width="0" height="20"/></clipPath>
+    <text class="cmd" x="0" y="14" clip-path="url(#cl1)">cat about.txt</text>
   </svg>
-  <rect class="c1" x="252" y="52" width="8" height="14" fill="#fff"/>
 
-  <!-- Line 2: output -->
   <svg x="20" y="78" width="760" height="20" overflow="hidden">
-    <rect class="t2-text" x="0" y="0" width="0" height="20" fill="#050505"/>
-    <text class="out" x="0" y="14">> Final-year CS student @ CUNEF, Madrid</text>
+    <clipPath id="cl2"><rect class="l2" x="0" y="0" width="0" height="20"/></clipPath>
+    <text class="out" x="0" y="14" clip-path="url(#cl2)"><tspan class="green">&gt;</tspan> Final-year CS student @ CUNEF, Madrid</text>
   </svg>
 
-  <!-- Lines 3-5 appear -->
-  <text class="out l3" x="20" y="114">> Thesis: AI applied to railway interlocking systems</text>
-  <text class="out l4" x="20" y="134">> Stack: Python · TensorFlow · GCP · Docker</text>
-  <text class="out l5" x="20" y="154">> Status: building things that matter_</text>
+  <svg x="20" y="98" width="760" height="20" overflow="hidden">
+    <clipPath id="cl3"><rect class="l3" x="0" y="0" width="0" height="20"/></clipPath>
+    <text class="out" x="0" y="14" clip-path="url(#cl3)"><tspan class="green">&gt;</tspan> Thesis: AI applied to railway interlocking systems</text>
+  </svg>
 
-  <!-- Blinking cursor at end -->
-  <rect class="blink l5" x="306" y="142" width="8" height="14" fill="#333"/>
+  <svg x="20" y="118" width="760" height="20" overflow="hidden">
+    <clipPath id="cl4"><rect class="l4" x="0" y="0" width="0" height="20"/></clipPath>
+    <text class="out" x="0" y="14" clip-path="url(#cl4)"><tspan class="green">&gt;</tspan> Stack: Python · TensorFlow · GCP · Docker</text>
+  </svg>
+
+  <text class="prompt" x="20" y="158">~$ <tspan class="blink" fill="#39d353">█</tspan></text>
 </svg>

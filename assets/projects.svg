@@ -1,66 +1,59 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="260" viewBox="0 0 800 260">
-  <rect width="800" height="260" fill="#050505"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="280" viewBox="0 0 800 280">
   <style>
     text{font-family:'Courier New',monospace}
-    .title{font-size:12px;fill:#cccccc;font-weight:bold}
-    .desc{font-size:10px;fill:#333333}
-    .tag{font-size:9px;fill:#222222;letter-spacing:1px}
-    .border{fill:none;stroke:#111;stroke-width:1}
-    .live-dot{fill:#666}
-    .done-dot{fill:#222}
-    @keyframes pulse{0%,100%{opacity:1;r:4}50%{opacity:0.2;r:3}}
-    @keyframes slide-in-1{from{transform:translateX(-20px);opacity:0}to{transform:none;opacity:1}}
-    @keyframes slide-in-2{from{transform:translateX(-20px);opacity:0}to{transform:none;opacity:1}}
-    @keyframes slide-in-3{from{transform:translateX(-20px);opacity:0}to{transform:none;opacity:1}}
-    @keyframes slide-in-4{from{transform:translateX(-20px);opacity:0}to{transform:none;opacity:1}}
-    .p1{animation:slide-in-1 0.6s cubic-bezier(0.4,0,0.2,1) 0.1s both}
-    .p2{animation:slide-in-2 0.6s cubic-bezier(0.4,0,0.2,1) 0.3s both}
-    .p3{animation:slide-in-3 0.6s cubic-bezier(0.4,0,0.2,1) 0.5s both}
-    .p4{animation:slide-in-4 0.6s cubic-bezier(0.4,0,0.2,1) 0.7s both}
-    .live-pulse{animation:pulse 1.8s ease-in-out infinite}
-    .status-live{font-size:9px;fill:#555;letter-spacing:2px}
-    .status-done{font-size:9px;fill:#1e1e1e;letter-spacing:2px}
-    .left-bar{fill:#fff}
-    @keyframes bar-grow{from{height:0;y:100%}to{}}
+    .title{font-size:13px;fill:#c9d1d9;font-weight:bold}
+    .desc{font-size:11px;fill:#7d8590}
+    .border{fill:none;stroke:#26a641;stroke-width:1;opacity:0.4}
+    .border-dash{fill:none;stroke:#26a641;stroke-width:1;opacity:0.25;stroke-dasharray:4 4}
+    .accent{fill:#39d353}
+    @keyframes pulse{0%,100%{opacity:1;r:5}50%{opacity:0.3;r:4}}
+    @keyframes slide-in{from{transform:translateX(-20px);opacity:0}to{transform:none;opacity:1}}
+    @keyframes draw-bar{from{height:0}to{height:100px}}
+    .p1{animation:slide-in 0.6s cubic-bezier(0.4,0,0.2,1) 0.1s both}
+    .p2{animation:slide-in 0.6s cubic-bezier(0.4,0,0.2,1) 0.3s both}
+    .p3{animation:slide-in 0.6s cubic-bezier(0.4,0,0.2,1) 0.5s both}
+    .p4{animation:slide-in 0.6s cubic-bezier(0.4,0,0.2,1) 0.7s both}
+    .live-pulse{animation:pulse 1.6s ease-in-out infinite}
+    .status-live{font-size:10px;fill:#39d353;letter-spacing:2px;font-weight:bold}
+    .status-done{font-size:10px;fill:#7d8590;letter-spacing:2px}
+    .status-soon{font-size:10px;fill:#7d8590;letter-spacing:2px;opacity:0.6}
+    .left-bar{fill:#39d353;animation:draw-bar 0.5s 0.3s both}
+    .gray-bar{fill:#26a641;opacity:0.4}
   </style>
 
-  <!-- Project 1 -->
   <g class="p1">
-    <rect class="border" x="20" y="20" width="370" height="100" rx="0"/>
-    <rect class="left-bar" x="20" y="20" width="2" height="100"/>
-    <text class="title" x="36" y="42">tfg-interlocking-ai</text>
-    <text class="desc" x="36" y="62">AI digitization of railway interlocking</text>
-    <text class="desc" x="36" y="76">tables. ML meets critical infrastructure.</text>
-    <circle class="live-pulse" cx="36" cy="100" r="4"/>
-    <text class="status-live" x="48" y="104">IN PROGRESS</text>
+    <rect class="border" x="20" y="20" width="370" height="100" rx="4"/>
+    <rect class="left-bar" x="20" y="20" width="3" height="100"/>
+    <text class="title" x="40" y="44"><tspan class="accent">$</tspan> tfg-interlocking-ai</text>
+    <text class="desc" x="40" y="64">AI-powered digitization of railway</text>
+    <text class="desc" x="40" y="80">interlocking tables. Thesis project.</text>
+    <circle class="live-pulse" cx="40" cy="104" r="5" fill="#39d353"/>
+    <text class="status-live" x="54" y="108">IN PROGRESS</text>
   </g>
 
-  <!-- Project 2 -->
   <g class="p2">
-    <rect class="border" x="410" y="20" width="370" height="100" rx="0"/>
-    <rect class="done-dot" x="410" y="20" width="2" height="100" fill="#1a1a1a"/>
-    <text class="title" x="426" y="42">eshop-gcp</text>
-    <text class="desc" x="426" y="62">E-commerce on Google Cloud App Engine.</text>
-    <text class="desc" x="426" y="76">Full backend pipeline + CI/CD.</text>
-    <text class="status-done" x="426" y="104">✓ COMPLETE</text>
+    <rect class="border" x="410" y="20" width="370" height="100" rx="4"/>
+    <rect class="gray-bar" x="410" y="20" width="3" height="100"/>
+    <text class="title" x="430" y="44"><tspan class="accent">$</tspan> eshop-gcp</text>
+    <text class="desc" x="430" y="64">E-commerce on Google Cloud App Engine</text>
+    <text class="desc" x="430" y="80">with full backend pipeline.</text>
+    <text class="status-done" x="430" y="108">✓ COMPLETE</text>
   </g>
 
-  <!-- Project 3 -->
   <g class="p3">
-    <rect class="border" x="20" y="140" width="370" height="100" rx="0"/>
-    <rect class="done-dot" x="20" y="140" width="2" height="100" fill="#1a1a1a"/>
-    <text class="title" x="36" y="162">pso-benchmark</text>
-    <text class="desc" x="36" y="182">Particle Swarm Optimization with</text>
-    <text class="desc" x="36" y="196">parallel strategies + benchmarking.</text>
-    <text class="status-done" x="36" y="224">✓ COMPLETE</text>
+    <rect class="border" x="20" y="140" width="370" height="100" rx="4"/>
+    <rect class="gray-bar" x="20" y="140" width="3" height="100"/>
+    <text class="title" x="40" y="164"><tspan class="accent">$</tspan> pso-benchmark</text>
+    <text class="desc" x="40" y="184">Particle Swarm Optimization with</text>
+    <text class="desc" x="40" y="200">parallel strategies + benchmarking.</text>
+    <text class="status-done" x="40" y="228">✓ COMPLETE</text>
   </g>
 
-  <!-- Project 4 placeholder -->
   <g class="p4">
-    <rect class="border" x="410" y="140" width="370" height="100" rx="0" stroke-dasharray="4 4"/>
-    <text class="title" x="426" y="162" fill="#1a1a1a">next_project</text>
-    <text class="desc" x="426" y="182" fill="#161616">always building something.</text>
-    <text class="desc" x="426" y="196" fill="#161616">stay tuned.</text>
-    <text class="status-done" x="426" y="224">⚡ COMING SOON</text>
+    <rect class="border-dash" x="410" y="140" width="370" height="100" rx="4"/>
+    <text class="title" x="430" y="164" fill="#7d8590"><tspan class="accent">$</tspan> next_project</text>
+    <text class="desc" x="430" y="184" opacity="0.6">always building something.</text>
+    <text class="desc" x="430" y="200" opacity="0.6">stay tuned.</text>
+    <text class="status-soon" x="430" y="228">⚡ COMING SOON</text>
   </g>
 </svg>
