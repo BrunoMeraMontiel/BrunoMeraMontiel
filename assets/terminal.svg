@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="180" viewBox="0 0 800 180">
+  <rect width="800" height="180" fill="#050505"/>
+  <rect x="1" y="1" width="798" height="178" fill="none" stroke="#111" stroke-width="1"/>
+
+  <!-- terminal dots -->
+  <circle cx="24" cy="22" r="5" fill="#1e1e1e"/>
+  <circle cx="42" cy="22" r="5" fill="#1e1e1e"/>
+  <circle cx="60" cy="22" r="5" fill="#1e1e1e"/>
+  <line x1="0" y1="36" x2="800" y2="36" stroke="#0f0f0f" stroke-width="1"/>
+
+  <style>
+    text{font-family:'Courier New',monospace;font-size:13px}
+    .prompt{fill:#ffffff}
+    .cmd{fill:#555555}
+    .out{fill:#2a2a2a}
+    .cur{fill:#ffffff}
+    @keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+    @keyframes type1{0%,5%{width:0}40%,100%{width:210px}}
+    @keyframes type2{0%,42%{width:0}70%,100%{width:360px}}
+    @keyframes appear3{0%,68%{opacity:0}69%,100%{opacity:1}}
+    @keyframes appear4{0%,76%{opacity:0}77%,100%{opacity:1}}
+    @keyframes appear5{0%,84%{opacity:0}85%,100%{opacity:1}}
+    @keyframes cur1{0%,38%{opacity:1}39%,100%{opacity:0}}
+    @keyframes cur2{0%,68%{opacity:0}69%,83%{animation-timing-function:step-end}69%,84%{opacity:1}85%,100%{opacity:0}}
+    .t1-text{animation:type1 8s steps(18,end) infinite}
+    .t2-text{animation:type2 8s steps(28,end) infinite}
+    .l3{animation:appear3 8s infinite}
+    .l4{animation:appear4 8s infinite}
+    .l5{animation:appear5 8s infinite}
+    .c1{animation:cur1 8s step-end infinite;blink:blink 0.8s step-end infinite}
+    .c2{animation:blink 0.8s step-end infinite}
+    .blink{animation:blink 1s step-end infinite}
+  </style>
+
+  <!-- Line 1: command -->
+  <text class="prompt" x="20" y="64">~$</text>
+  <svg x="42" y="50" width="210" height="20" overflow="hidden">
+    <rect class="t1-text" x="0" y="0" width="0" height="20" fill="#050505"/>
+    <text class="cmd" x="0" y="14">cat about.txt</text>
+  </svg>
+  <rect class="c1" x="252" y="52" width="8" height="14" fill="#fff"/>
+
+  <!-- Line 2: output -->
+  <svg x="20" y="78" width="760" height="20" overflow="hidden">
+    <rect class="t2-text" x="0" y="0" width="0" height="20" fill="#050505"/>
+    <text class="out" x="0" y="14">> Final-year CS student @ CUNEF, Madrid</text>
+  </svg>
+
+  <!-- Lines 3-5 appear -->
+  <text class="out l3" x="20" y="114">> Thesis: AI applied to railway interlocking systems</text>
+  <text class="out l4" x="20" y="134">> Stack: Python · TensorFlow · GCP · Docker</text>
+  <text class="out l5" x="20" y="154">> Status: building things that matter_</text>
+
+  <!-- Blinking cursor at end -->
+  <rect class="blink l5" x="306" y="142" width="8" height="14" fill="#333"/>
+</svg>

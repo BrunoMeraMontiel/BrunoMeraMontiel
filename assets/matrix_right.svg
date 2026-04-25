@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="2000" viewBox="0 0 40 2000">
+  <rect width="40" height="2000" fill="#050505"/>
+  <style>
+    text{font-family:'Courier New',monospace;font-size:11px;fill:#fff;text-anchor:middle}
+    @keyframes f0{0%{transform:translateY(-220px);opacity:0}5%{opacity:0.7}85%{opacity:0.4}100%{transform:translateY(2000px);opacity:0}}
+    @keyframes f1{0%{transform:translateY(-220px);opacity:0}5%{opacity:0.5}85%{opacity:0.3}100%{transform:translateY(2000px);opacity:0}}
+    @keyframes f2{0%{transform:translateY(-220px);opacity:0}5%{opacity:0.8}85%{opacity:0.5}100%{transform:translateY(2000px);opacity:0}}
+    .c0{animation:f0 5.1s linear infinite 0s}
+    .c1{animation:f1 6.3s linear infinite 1.2s}
+    .c2{animation:f2 4.8s linear infinite 2.4s}
+    .c3{animation:f0 7.1s linear infinite 0.7s}
+    .c4{animation:f1 5.6s linear infinite 3.1s}
+    .bright{fill:#fff;font-weight:bold}
+    .dim{fill:#1a1a1a}
+  </style>
+
+  <!-- Column 1 at x=10 -->
+  <g class="c0">
+    <text x="10" y="0">B</text><text x="10" y="14">ア</text><text x="10" y="28">1</text>
+    <text x="10" y="42">ウ</text><text x="10" y="56">R</text><text x="10" y="70">エ</text>
+    <text x="10" y="84">0</text><text x="10" y="98">カ</text><text x="10" y="112">N</text>
+    <text x="10" y="126">キ</text><text x="10" y="140">7</text><text x="10" y="154">O</text>
+    <text x="10" y="168">ク</text><text x="10" y="182">3</text><text x="10" y="196" class="bright">█</text>
+  </g>
+  <g class="c1">
+    <text x="10" y="0">ケ</text><text x="10" y="14">A</text><text x="10" y="28">コ</text>
+    <text x="10" y="42">9</text><text x="10" y="56">サ</text><text x="10" y="70">I</text>
+    <text x="10" y="84">シ</text><text x="10" y="98">5</text><text x="10" y="112">ス</text>
+    <text x="10" y="126">L</text><text x="10" y="140">セ</text><text x="10" y="154">2</text>
+    <text x="10" y="168">ソ</text><text x="10" y="182">8</text><text x="10" y="196" class="bright">█</text>
+  </g>
+  <g class="c2">
+    <text x="10" y="0">W</text><text x="10" y="14">タ</text><text x="10" y="28">4</text>
+    <text x="10" y="42">チ</text><text x="10" y="56">A</text><text x="10" y="70">ツ</text>
+    <text x="10" y="84">Y</text><text x="10" y="98">テ</text><text x="10" y="112">6</text>
+    <text x="10" y="126">ト</text><text x="10" y="140">S</text><text x="10" y="154">ナ</text>
+    <text x="10" y="168">0</text><text x="10" y="182">ニ</text><text x="10" y="196" class="bright">█</text>
+  </g>
+  <g class="c3">
+    <text x="10" y="0">T</text><text x="10" y="14">ヌ</text><text x="10" y="28">E</text>
+    <text x="10" y="42">ネ</text><text x="10" y="56">R</text><text x="10" y="70">ノ</text>
+    <text x="10" y="84">1</text><text x="10" y="98">ハ</text><text x="10" y="112">M</text>
+    <text x="10" y="126">ヒ</text><text x="10" y="140">I</text><text x="10" y="154">フ</text>
+    <text x="10" y="168">N</text><text x="10" y="182">ヘ</text><text x="10" y="196" class="bright">█</text>
+  </g>
+  <g class="c4">
+    <text x="10" y="0">ホ</text><text x="10" y="14">A</text><text x="10" y="28">マ</text>
+    <text x="10" y="42">L</text><text x="10" y="56">ミ</text><text x="10" y="70">3</text>
+    <text x="10" y="84">ム</text><text x="10" y="98">7</text><text x="10" y="112">メ</text>
+    <text x="10" y="126">S</text><text x="10" y="140">モ</text><text x="10" y="154">9</text>
+    <text x="10" y="168">ヤ</text><text x="10" y="182">2</text><text x="10" y="196" class="bright">█</text>
+  </g>
+
+  <!-- Column 2 at x=28 -->
+  <g class="c1" style="animation-delay:0.8s">
+    <text x="28" y="0">ユ</text><text x="28" y="14">5</text><text x="28" y="28">ヨ</text>
+    <text x="28" y="42">R</text><text x="28" y="56">ラ</text><text x="28" y="70">8</text>
+    <text x="28" y="84">リ</text><text x="28" y="98">N</text><text x="28" y="112">ル</text>
+    <text x="28" y="126">0</text><text x="28" y="140">レ</text><text x="28" y="154">G</text>
+    <text x="28" y="168">ロ</text><text x="28" y="182">4</text><text x="28" y="196" class="bright">█</text>
+  </g>
+  <g class="c3" style="animation-delay:2.2s">
+    <text x="28" y="0">ワ</text><text x="28" y="14">I</text><text x="28" y="28">ヲ</text>
+    <text x="28" y="42">7</text><text x="28" y="56">ン</text><text x="28" y="70">T</text>
+    <text x="28" y="84">ヴ</text><text x="28" y="98">1</text><text x="28" y="112">B</text>
+    <text x="28" y="126">ヵ</text><text x="28" y="140">6</text><text x="28" y="154">ヶ</text>
+    <text x="28" y="168">S</text><text x="28" y="182">3</text><text x="28" y="196" class="bright">█</text>
+  </g>
+  <g class="c0" style="animation-delay:3.8s">
+    <text x="28" y="0">A</text><text x="28" y="14">ッ</text><text x="28" y="28">9</text>
+    <text x="28" y="42">ヅ</text><text x="28" y="56">2</text><text x="28" y="70">M</text>
+    <text x="28" y="84">ヂ</text><text x="28" y="98">5</text><text x="28" y="112">ダ</text>
+    <text x="28" y="126">E</text><text x="28" y="140">ザ</text><text x="28" y="154">8</text>
+    <text x="28" y="168">サ</text><text x="28" y="182">R</text><text x="28" y="196" class="bright">█</text>
+  </g>
+</svg>
