@@ -10,11 +10,11 @@
 
 <br>
 
-<a href="https://www.linkedin.com/in/bruno-mera-montiel">
+<a href="https://www.linkedin.com/in/bruno-mera-montiel-567845265/">
 <img src="https://img.shields.io/badge/linkedin-%23161b22.svg?style=for-the-badge&logo=linkedin&logoColor=39d353&labelColor=161b22"/>
 </a>
 &nbsp;
-<a href="mailto:bruno.mera@cunef.edu">
+<a href="mailto:bmeramontiel@gmail.com">
 <img src="https://img.shields.io/badge/email-%23161b22.svg?style=for-the-badge&logo=gmail&logoColor=39d353&labelColor=161b22"/>
 </a>
 &nbsp;
